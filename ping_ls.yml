@@ -4,7 +4,7 @@
     - name: Hello Message
       ping:
     - name: list
-      command: ls
+      command: uname 
       register: myoutput
     - set_fact:
         myoutput={{ myoutput.stdout }}
