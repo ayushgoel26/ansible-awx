@@ -1,5 +1,5 @@
 - name: Ping and List
-  hosts: all
+  hosts: ayushservers
   tasks:
     - name: Hello Message
       ping:
