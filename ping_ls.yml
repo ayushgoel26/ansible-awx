@@ -1,10 +1,17 @@
+- name: Hello World
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+
 - name: Ping and List
   hosts: ayushservers
   tasks:
-    - name: Hello Message
+    - name: Ping
       ping:
     - name: list
-      command: uname 
+      command: ls -lart 
       register: myoutput
     - set_fact:
         myoutput={{ myoutput.stdout }}
